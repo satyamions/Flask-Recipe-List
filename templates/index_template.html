@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html>
 <head>
     <title>Recipe List</title>
@@ -17,6 +16,7 @@
             border: 1px solid #ced4da;
             transition: transform 0.3s, box-shadow 0.3s;
             border-radius: 0.5rem;
+            padding: 10px; /* Adjust the padding to reduce gaps */
         }
         .card:hover {
             transform: scale(1.05);
@@ -60,6 +60,28 @@
         .modal-header .close {
             color: #343a40;
         }
+        .recipe-image {
+            width: 100%;
+            max-width: 400px; /* Set a max width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 0.25rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: contain;
+        }
+        .card-body {
+            text-align: center; /* Center align the content */
+            padding: 0; /* Remove extra padding from card body */
+        }
+        .card-body > *:not(:last-child) {
+            margin-bottom: 1rem; /* Add spacing between elements */
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Add some space above the buttons */
+        }
     </style>
 </head>
 <body>
@@ -72,8 +94,13 @@
                     <h6 class="card-subtitle mb-2 text-muted">Posted on {{ recipe.date_posted.strftime('%B %d, %Y') }}</h6>
                     <p class="card-text"><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
                     <p class="card-text"><strong>Instructions:</strong> {{ recipe.instructions }}</p>
-                    <a href="{{ url_for('update_recipe', id=recipe.id) }}" class="btn btn-primary btn-sm">Edit</a>
-                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirmDeleteModal" data-id="{{ recipe.id }}">Delete</button>
+                    {% if recipe.image_filename %}
+                        <img src="{{ url_for('static', filename='images/' + recipe.image_filename) }}" alt="{{ recipe.name }}" class="recipe-image mb-3">
+                    {% endif %}
+                    <div class="btn-group">
+                        <a href="{{ url_for('update_recipe', id=recipe.id) }}" class="btn btn-primary btn-sm">Edit</a>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirmDeleteModal" data-id="{{ recipe.id }}">Delete</button>
+                    </div>
                 </div>
             </div>
         {% endfor %}
