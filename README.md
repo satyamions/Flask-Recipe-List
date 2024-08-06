@@ -101,8 +101,6 @@ flask_recipe_maker/
 Contributions are welcome! Please fork this repository and submit a pull request for review.
 
 ## Acknowledgments
-
 - [Flask](https://flask.palletsprojects.com/) - The Python microframework used in this project.
 - [Bootstrap](https://getbootstrap.com/) - The CSS framework used for styling.
 - [AOS](https://michalsnik.github.io/aos/) - For the scroll animations.
-```
