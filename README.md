@@ -106,11 +106,3 @@ Contributions are welcome! Please fork this repository and submit a pull request
 - [Bootstrap](https://getbootstrap.com/) - The CSS framework used for styling.
 - [AOS](https://michalsnik.github.io/aos/) - For the scroll animations.
 ```
-
-### Instructions to Include in the Project:
-
-1. Place this `README.md` file** in the root of your project directory.
-2. Add a `requirements.txt` file** with the dependencies needed to run the project:
-   ```bash
-   pip freeze > requirements.txt
-   ```
