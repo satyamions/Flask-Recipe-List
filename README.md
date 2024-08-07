@@ -97,6 +97,10 @@ flask_recipe_maker/
 
 Contributions are welcome! Fork the repository and submit a pull request for review.
 
+## Website 
+
+![Screenshot 2024-08-07 172814](https://github.com/user-attachments/assets/1088424a-8414-45ac-aac4-1f047c4bf6b3)
+
 ## Acknowledgments
 
 - [Flask](https://flask.palletsprojects.com/) - The Python microframework used in this project.
