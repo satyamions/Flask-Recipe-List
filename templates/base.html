@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Recipe Realm</title>
+    <title>{% block title %}Recipe Realm{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Open+Sans:wght@300;600&display=swap">
@@ -13,113 +13,14 @@
             font-family: 'Roboto', sans-serif;
             margin-top: 20px;
         }
-        .hero-section {
-            background: url('path/to/your/background-image.jpg') no-repeat center center;
-            background-size: cover;
-            padding: 80px 0;
-            color: #fff;
-            text-align: center;
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 0 0 20px 20px;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        .hero-section h1 {
-            font-family: 'Lora', serif;
-            font-weight: 700;
-            font-size: 3.5rem;
-            color: #f8f9fa;
-        }
-        .hero-section p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.5rem;
-            color: #e2e6ea;
-        }
-        .container-content {
-            margin-top: 40px;
-        }
-        .card {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            overflow: hidden;
-        }
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-        .card-body {
-            padding: 1.25rem;
-        }
-        .btn-primary, .btn-success, .btn-danger {
-            border-radius: 20px;
-            font-weight: 600;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #004085;
-        }
-        .btn-success {
-            background-color: #28a745;
-            border-color: #28a745;
-            color: #fff;
-        }
-        .btn-success:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
-        }
-        .btn-danger {
-            background-color: #dc3545;
-            border-color: #dc3545;
-            color: #fff;
-        }
-        .btn-danger:hover {
-            background-color: #c82333;
-            border-color: #bd2130;
-        }
-        .text-primary {
-            color: #007bff;
-        }
-        .text-success {
-            color: #28a745;
-        }
-        .text-danger {
-            color: #dc3545;
-        }
-        .text-light {
-            color: #f8f9fa;
-        }
         .navbar {
-            background-color: white
+            background-color: #6c757d !important; /* Grey color with !important */
             border-radius: 0 0 10px 10px;
         }
         .navbar-brand {
             font-family: 'Lora', serif;
             font-weight: 700;
+            color: #fff !important; /* White text color with !important */
         }
         .navbar-nav {
             margin-left: auto;
@@ -133,6 +34,13 @@
         .nav-link:hover {
             color: #f8f9fa !important;
         }
+        .btn-primary {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border: none;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+        }
         .form-control {
             border-radius: 0.25rem;
             box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
@@ -144,8 +52,9 @@
         .navbar-text {
             font-family: 'Open Sans', sans-serif;
             font-size: 1.25rem;
-            color: #007bff;
+            color: #fff !important; /* White text color with !important */
             font-weight: 600;
+            margin-right: 1rem;
         }
     </style>
 </head>
