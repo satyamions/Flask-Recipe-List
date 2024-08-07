@@ -2,6 +2,7 @@
 
 A comprehensive web application built with Flask, allowing users to create, edit, and manage recipes. The application features user authentication, image uploads, and a modern design using Bootstrap.
 
+
 ## Features
 
 - **User Authentication**: Register, login, and manage user sessions.
@@ -80,7 +81,15 @@ flask_recipe_maker/
 ├── config.py              # Configuration settings
 ├── models.py              # Database models
 ├── templates/             # HTML templates
+│   ├── index.html
+│   ├── add_recipe_template.html
+│   ├── update_recipe_template.html
+│   └── login.html
+│   └── register.html
 ├── static/                # Static files (CSS, JavaScript, images)
+│   ├── css/
+│   ├── js/
+│   └── images/
 ├── migrations/            # Database migrations
 └── README.md              # This README file
 ```
