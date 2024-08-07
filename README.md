@@ -81,15 +81,7 @@ flask_recipe_maker/
 ├── config.py              # Configuration settings
 ├── models.py              # Database models
 ├── templates/             # HTML templates
-│   ├── index.html
-│   ├── add_recipe_template.html
-│   ├── update_recipe_template.html
-│   └── login.html
-│   └── register.html
 ├── static/                # Static files (CSS, JavaScript, images)
-│   ├── css/
-│   ├── js/
-│   └── images/
 ├── migrations/            # Database migrations
 └── README.md              # This README file
 ```
